@@ -24,4 +24,5 @@ def upload(filename):
     
     upload_response = requests.post(upload_endpoint, headers=headers_auth_only, data=read_file)
     pprint(upload_response.json())
+    
     return upload_response.json()['upload_url']
